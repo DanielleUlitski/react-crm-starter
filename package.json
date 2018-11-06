@@ -1,28 +1,30 @@
 {
   "name": "react-crm-starter",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "mobx": "^5.5.2",
-    "mobx-react": "^5.3.6",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-router": "^4.3.1",
-    "react-scripts": "2.0.5"
-  },
+  "version": "1.0.0",
+  "description": "To load the data into a file, you can use this code:\r <!-- HTML generated using hilite.me --><div style=\"overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #888888\">//use setTimeout to simulate an API call</span>\r setTimeout(() =&gt; {\r     <span style=\"color: #008800; font-weight: bold\">  let</span> data = require(&#39;../data.json&#39;)\r     <span style=\"color: #888888\">  //populate state with data</span>\r }, <span style=\"color: #0000DD; font-weight: bold\">100</span>)\r </pre></div>",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielleUlitski/react-crm-starter.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielleUlitski/react-crm-starter/issues"
+  },
+  "homepage": "https://github.com/DanielleUlitski/react-crm-starter#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.1",
+    "path": "^0.12.7",
+    "sequelize": "^4.41.0",
+    "socket.io": "^2.1.1"
+  }
 }

@@ -1,0 +1,288 @@
+body {
+  background-color: #ecf0f1;
+}
+
+.nav {
+  background-color: #0a1612;
+  display: inline-block;
+  width: 100%;
+}
+
+.nav li {
+  float: left;
+  clear: none;
+  padding: 15px;
+  list-style-type: none;
+  font-size: 1.2em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.pagination * {
+  float: left;
+  clear: none;
+}
+
+.pagination {
+  float: right;
+  clear: both;
+  padding: 10px;
+}
+
+.header th {
+  padding: 20px;
+  font-size: 1.2em;
+  background-color: #F7CE3E;
+  margin: 0;
+}
+
+.clientsTable {
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: 5%;
+  margin-top: 13px;
+  text-align: center;
+}
+
+.pagination input {
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin: 2px;
+}
+
+.clientsTable tr td {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 7000;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal-close {
+  cursor: pointer;
+  color: white;
+  padding: 0px;
+  z-index: 9100;
+  float: left;
+  clear: both;
+}
+
+.modal-close:hover {
+  color: red;
+}
+
+.form-group {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  background:rgba(85, 85, 85, 0.5);
+  border-radius: 12px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 13px;
+  width: 25%;
+  font-weight: 500;
+}
+
+.form-input {
+  font-size: 1.3em;
+  float: left;
+  clear: both;
+  margin-bottom: 13px;
+  width: 100%;
+}
+
+.form-input span {
+  float: left;
+  clear: none;
+}
+
+.form-input input {
+  float: right;
+  clear: none;
+  background-color: inherit;
+  border: none;
+  border-bottom: black solid 1px;
+  font-size: 17px;
+}
+
+.update-btn {
+  width: 100%;
+  padding: 13px;
+  background: #F7CE3E;
+  border: none;
+  font-size: 1.2em;
+}
+
+#content {
+  width: 500px;
+	display: block;
+	color: white;
+	position: relative;
+	margin: 100px auto;
+	padding: 30px;
+	border: 1px solid white;
+  background: rgba(0,0,0,0.25);
+}
+
+.auto-completer {
+  position: absolute;
+  border: 1px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;
+  max-height: 143px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: calc(300px + 1rem);
+  background-color: #ecf0f1;
+}
+
+.auto-completer li {
+  padding: 0.5rem;
+}
+
+.auto-completer li:hover {
+  background-color: #008f68;
+  color: #fae042;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.auto-completer li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+
+.badges div {
+  float: left;
+  clear: none;
+  margin-left: 50px;
+}
+
+.number {
+  font-size: 2em;
+}
+
+.badge {
+  max-width: 200px;
+  width: 30%;
+  float: left;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.add-client div {
+  padding: 15px;
+  max-width: 290px;
+}
+
+.add-client div input {
+  float: right;
+  clear: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid lightgray;
+}
+
+.add-client div span {
+  float: left;
+  clear: none;
+  font-size: 1.2em;
+}
+
+#owner {
+  float: right;
+  clear: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid lightgray;
+  width: 60%;
+  height: 25px;
+  font-size: 1.1em;
+}
+
+.add-btn {
+  border: none;
+  background-color: #fae042;
+  width: 300px;
+  height: 50px;
+  font-size: 1.3em;
+  font-weight: bold;
+  position: absolute;
+  left: 15px;
+  margin-top: 15px;
+}
+
+h3 {
+  margin-left: 15px;
+}
+
+.updates {
+  padding: 15px;
+  max-width: 1000px;
+}
+
+.updates div div span {
+  color: #fae042;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.updates div div span:active {
+  color: #ad9c2a;
+}
+
+.updates div select {
+  float: right;
+  clear: right;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid lightgray;
+  width: 30%;
+  height: 25px;
+  font-size: 1.1em;
+}
+
+.updates div span {
+  float: left;
+  clear: both;
+  font-size: 1.2em;
+}
+
+.seperation {
+  clear: left;
+  margin-top: 55px;
+}
+
+.top-employees {
+  width: 30%;
+  height: 250px;
+  position: absolute;
+  top: 200px;
+}
+
+.sales-by {
+  width: 60%;
+  height: 250px;
+  position: absolute;
+  top: 200px;
+  right: 40px;
+}
+
+.sales-since {
+  width: 60%;
+  height: 185px;
+  position: absolute;
+  bottom: 100px;
+}
