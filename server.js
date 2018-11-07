@@ -14,7 +14,7 @@ server.listen(process.env.PORT || '8090');
 //     next()
 // })
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 // app.use(express.static(path.join(__dirname, 'client')))
 app.use(router);
 
