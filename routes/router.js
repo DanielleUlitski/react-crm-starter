@@ -10,25 +10,25 @@ router.use(bodyParser.json());
 
 const Clients = sequelize.define('clients', {
     name: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.CHAR
     },
     email: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.CHAR
     },
     firstContact: {
         type: Sequelize.DATE
     },
     emailType: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.CHAR
     },
     sold: {
         type: Sequelize.BOOLEAN
     },
     owner: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.CHAR
     },
     country: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.CHAR
     }
 })
 
