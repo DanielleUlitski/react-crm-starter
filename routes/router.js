@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize(process.env.sqlDB || "mysql://sql7263192:uerxNkiTpF@sql7.freesqldatabase.com/sql7263192");
+const sequelize = new Sequelize(process.env.sqlDB);
 const bodyParser = require('body-parser');
 const dateFormat = require('dateformat');
 
