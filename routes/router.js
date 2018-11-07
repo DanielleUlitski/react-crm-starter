@@ -32,13 +32,13 @@ const Clients = sequelize.define('clients', {
     }
 })
 
-router.get('/clients', (req, res) => {
+router.get('/stuff/clients', (req, res) => {
     Clients.findAll({}).then(clients => {
         res.send(clients);
     })
 })
 
-router.post('/newOwner', (req, res) => {
+router.post('/stuff/newOwner', (req, res) => {
     Clients.update(
         { owner: req.body.newOwner },
         {
@@ -59,7 +59,7 @@ router.post('/newOwner', (req, res) => {
         })
 })
 
-router.post('/newEmailType', (req, res) => {
+router.post('/stuff/newEmailType', (req, res) => {
     Clients.update(
         { emailType: req.body.newEmailType },
         {
@@ -80,7 +80,7 @@ router.post('/newEmailType', (req, res) => {
         })
 })
 
-router.post('/sale', (req, res) => {
+router.post('/stuff/sale', (req, res) => {
     Clients.update(
         { sold: req.body.newBool },
         {
@@ -99,7 +99,7 @@ router.post('/sale', (req, res) => {
         })
 })
 
-router.post('/qedit', (req, res) => {
+router.post('/stuff/qedit', (req, res) => {
     Clients.update(
         { name: req.body.name, country: req.body.country },
         {
@@ -118,7 +118,7 @@ router.post('/qedit', (req, res) => {
         })
 })
 
-router.post('/new', (req, res) => {
+router.post('/stuff/new', (req, res) => {
     let now = new Date();
     Clients.create({
         name: req.body.name,
