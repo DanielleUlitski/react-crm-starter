@@ -28,7 +28,7 @@ class Clients {
     @observable emailTypeSales = {};
 
     @action populateClients = async (min, max, isClientsComponent, isActionComponent, isAnalyticsComponent) => {
-        this.clients = await axios.get('http://localhost:8090/stuff/clients')
+        this.clients = await axios.get('/stuff/clients')
         this.clients = this.clients.data
         if (isClientsComponent) {
             this.applyFilter("name", "");
@@ -161,14 +161,14 @@ class Clients {
 
     @action transfer = async (newOwner) => {
         let index = this.clients.indexOf(this.client)
-        this.clients[index] = await axios.post('http://localhost:8090/stuff/newOwner', { newOwner: newOwner, id: this.client.id });
+        this.clients[index] = await axios.post('/stuff/newOwner', { newOwner: newOwner, id: this.client.id });
         this.clients[index] = this.clients[index].data
         this.client = this.clients[index]
     }
 
     @action send = async (newEmailType) => {
         let index = this.clients.indexOf(this.client)
-        this.clients[index] = await axios.post('http://localhost:8090/stuff/newEmailType', { newEmailType: newEmailType, id: this.client.id });
+        this.clients[index] = await axios.post('/stuff/newEmailType', { newEmailType: newEmailType, id: this.client.id });
         this.clients[index] = this.clients[index].data
         this.client = this.clients[index]
     }
@@ -184,14 +184,14 @@ class Clients {
                 break;
         }
         let index = this.clients.indexOf(this.client)
-        this.clients[index] = await axios.post('http://localhost:8090/stuff/sale', { newBool: newBool, id: this.client.id });
+        this.clients[index] = await axios.post('/stuff/sale', { newBool: newBool, id: this.client.id });
         this.clients[index] = this.clients[index].data
         this.client = this.clients[index]
     }
 
     @action editClient = async (index, changes, min, max) => {
         changes.id = this.clients[index].id
-        this.clients[index] = await axios.post('http://localhost:8090/stuff/qedit', changes);
+        this.clients[index] = await axios.post('/stuff/qedit', changes);
         this.clients[index] = this.clients[index].data
         this.populateDisplayed(min, max)
     }
@@ -204,7 +204,7 @@ class Clients {
             owner: owner,
             country: country
         };
-        this.clients = await axios.post('http://localhost:8090/stuff/new', newClient);
+        this.clients = await axios.post('/stuff/new', newClient);
         this.clients = this.clients.data;
     }
 }
